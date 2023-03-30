@@ -1,96 +1,56 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-    <style>
-        /* style for my name */
-        
-        h1{
-          /* Put a 15-pixel margin at the bottom of the heading. */
-    margin-bottom: 15px;
-    /* Change the size of your font to 60 pixels high. */
-    font-size: 60px;
-    /* This will color the heading font white. */
-    color: rgb(7, 7, 7);
-    /* Align the text to the center of its enclosing element (e.g. div). */
-    text-align: center;
-    /* Underline the text. */
-    text-decoration: underline;
-    /* The background of the heading element will now be black. */
-    background-color: rgb(39, 92, 67);  
-        }
-
-        h2{
-          /* Put a 15-pixel margin at the bottom of the heading. */
-    margin-bottom: 10px;
-    /* Change the size of your font to 60 pixels high. */
-    font-size: 30px;
-    /* This will color the heading font white. */
-    color: rgb(7, 7, 7);
-    /* Align the text to the center of its enclosing element (e.g. div). */
-    text-align: center;
-  
-        }
-
-          /* All img tags */
-        img {
-    /* 
-      Center a block element in the middle of its enclosing tag.
-      When you use the "auto" rule on both left and right margins, 
-      your browser will do the math necessary to center a block element.
-      */
-    margin-left: auto;
-    margin-right: auto;
-    /* Block display (more on this later) */
-    display: block;
-             }
-
-li{
-    font-size: 30px;
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-
-
-
-
 <body>
-    <header>
-        <h1>Negin Kananizadeh</h1>
-        <hr>
-        <p>
-        <h2>About</h2>
-        </hr>
-        </p>
 
-        <img width="250" src="./NK.png" />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
 
-        
-
-        <p>
-            
-            <ul>
-          
-                <li>
-                Has wide experience in finite element analysis (FEA) in the applications counting computational fluid dynamics (CFD)<br>
-                (i.e., Newtonian and non-Newtonian fluids), particle tracing, solute transport, and multi-physics coupling using FEA tools (COMSOL).</li>
-                <li>
-                Has strong background in soil remediation.   
-                </li>
-                <li>
-                Has programming skills using R studio, Python, SQL, LabView, and MATLAB.
-                </li>
-
-            </ul>
-            
-        </p>
-
-        <a href="https://www.linkedin.com/in/negin-kananizadeh"> LinkedinPage</a>
-    </header>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+  <!--<script src="./static/js/bonus.js"></script>-->
+  
 </body>
-
-
 
 </html>

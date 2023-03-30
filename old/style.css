@@ -1,0 +1,32 @@
+.title{
+    font-weight: bold;   
+}
+
+#color{
+    color:rgb(219, 73, 29)
+}
+
+h1{
+    font-size: 60px;
+    
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul{
+    text-align: left;
+    font-size: 25px;
+}
+
+.bullets{
+    margin-bottom: 80px;
+}
+
+#link-font{
+    font-size: 25px;
+    font-style: italic;
+}
+
+#larger_font{
+    font-size: 40px;
+}
